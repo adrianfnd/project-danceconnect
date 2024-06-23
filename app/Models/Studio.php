@@ -16,7 +16,9 @@ class Studio extends Model
         'location', 
         'image_url', 
         'price', 
-        'owner'];
+        'owner',
+        'description'
+    ];
 
     public function schedules()
     {

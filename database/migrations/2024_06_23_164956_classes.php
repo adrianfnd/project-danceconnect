@@ -18,6 +18,9 @@ return new class extends Migration
             $table->integer('quota');
             $table->uuid('tutor_id');
             $table->foreign('tutor_id')->references('uuid')->on('tutors');
+            $table->text('description');
+            $table->integer('duration');
+            $table->decimal('price', 10, 2);
             $table->timestamps();
         });
     }

@@ -15,7 +15,10 @@ class Classes extends Model
         'name', 
         'start_at', 
         'quota', 
-        'tutor_id'
+        'tutor_id', 
+        'description', 
+        'duration', 
+        'price'
     ];
 
     public function tutor()
