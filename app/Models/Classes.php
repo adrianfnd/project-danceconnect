@@ -25,4 +25,9 @@ class Classes extends Model
     {
         return $this->belongsTo(Tutor::class, 'tutor_id', 'uuid');
     }
+
+    public function transactions()
+    {
+        return $this->hasMany(Transaction::class, 'class_id', 'uuid');
+    }
 }

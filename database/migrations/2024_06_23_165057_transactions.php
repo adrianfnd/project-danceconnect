@@ -21,9 +21,9 @@ return new class extends Migration
             $table->foreign('studio_schedule_id')->references('id')->on('studio_schedules');
             $table->uuid('tutor_id')->nullable();
             $table->foreign('tutor_id')->references('uuid')->on('tutors');
-            $table->unsignedBigInteger('tutor_scheduled_id');
+            $table->unsignedBigInteger('tutor_scheduled_id')->nullable();
             $table->foreign('tutor_scheduled_id')->references('id')->on('tutor_schedules');
-            $table->uuid('class_id');
+            $table->uuid('class_id')->nullable();
             $table->foreign('class_id')->references('uuid')->on('classes');
             $table->string('xendit_log_id')->nullable();
             $table->foreign('xendit_log_id')->references('id')->on('xendit_logs');
