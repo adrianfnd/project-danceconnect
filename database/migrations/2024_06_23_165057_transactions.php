@@ -25,8 +25,10 @@ return new class extends Migration
             $table->foreign('tutor_scheduled_id')->references('id')->on('tutor_schedules');
             $table->uuid('class_id')->nullable();
             $table->foreign('class_id')->references('id')->on('classes');
+            $table->decimal('amount', 10, 2);
             $table->string('xendit_log_id')->nullable();
             $table->foreign('xendit_log_id')->references('id')->on('xendit_logs');
+            $table->decimal('amount_paid', 10, 2)->nullable();
             $table->string('status');
             $table->timestamps();    
         });

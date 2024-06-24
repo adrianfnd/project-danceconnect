@@ -18,7 +18,8 @@ class Classes extends Model
         'tutor_id', 
         'description', 
         'duration', 
-        'price'
+        'price',
+        'image_url'
     ];
 
     public function tutor()

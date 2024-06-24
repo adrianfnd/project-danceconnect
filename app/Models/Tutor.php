@@ -13,7 +13,8 @@ class Tutor extends Model
 
     protected $fillable = [
         'name',
-        'bio'
+        'bio',
+        'image_url'
     ];
 
     public function classes()

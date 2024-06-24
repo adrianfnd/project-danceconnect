@@ -31,18 +31,20 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('logout.action');
 Route::middleware(['auth'])->group(function () {
     // Studio routes
     Route::get('/studios', [StudioAdminController::class, 'index'])->name('admin.studios.index');
+    
     Route::get('/studios-schedules', [StudioAdminController::class, 'schedules'])->name('admin.studios.schedules');
-    Route::get('/studios-{uuid}', [StudioAdminController::class, 'schedule'])->name('admin.studios.schedule');
+    Route::get('/studios-{id}', [StudioAdminController::class, 'schedule'])->name('admin.studios.schedule');
 
     // Tutor routes
     Route::get('/tutors', [TutorAdminController::class, 'index'])->name('admin.tutors.index');
-    Route::get('/tutors-classes', [TutorAdminController::class, 'classes'])->name('admin.tutors.classes');
-    Route::get('/tutors-users', [TutorAdminController::class, 'users'])->name('admin.tutors.users');
-    Route::get('/tutors-classes-{uuid}', [TutorAdminController::class, 'classSchedule'])->name('admin.tutors.class_schedule');
+    Route::get('/tutors-classes', [TutorAdminController::class, 'indexClasses'])->name('admin.tutors.classes.index');
+
+    Route::get('/tutors-classes-schedules', [TutorAdminController::class, 'schedules'])->name('admin.tutors.classes.schedules');
+    Route::get('/tutors-classes-{id}', [TutorAdminController::class, 'schedule'])->name('admin.tutors.classes.schedule');
 
     // Transaction routes
     Route::get('/transactions', [TransactionAdminController::class, 'index'])->name('admin.transactions.index');
-    Route::get('/transactions-{uuid}', [TransactionAdminController::class, 'show'])->name('admin.transactions.show');
+    Route::get('/transactions-{id}', [TransactionAdminController::class, 'show'])->name('admin.transactions.show');
 });
 
 // Costumer routes

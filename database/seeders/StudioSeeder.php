@@ -25,7 +25,7 @@ class StudioSeeder extends Seeder
                 'uuid' => Str::uuid(),
                 'name' => $studio['name'],
                 'location' => $cities[array_rand($cities)],
-                'image_url' => 'https://example.com/kpop_studio.jpg',
+                'image_url' => 'https://source.unsplash.com/1600x900/?studio',
                 'price' => $studio['price'],
                 'owner' => 'PT. Dance Connect Indonesia',
                 'description' => 'Studio tari modern dilengkapi dengan cermin, sistem suara, dan pendingin ruangan, sempurna untuk latihan tari K-pop.'

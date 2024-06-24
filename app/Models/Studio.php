@@ -22,6 +22,11 @@ class Studio extends Model
 
     public function schedules()
     {
-        return $this->hasMany(StudioSchedule::class, 'studio_id', 'id');
+        return $this->belongsTo(StudioSchedule::class, 'studio_id', 'id');
+    }
+
+    public function transactions()
+    {
+        return $this->hasMany(Transaction::class);
     }
 }

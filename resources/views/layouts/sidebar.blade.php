@@ -33,25 +33,25 @@
                         </a>
                     </li>
                     <li class="sidebar-list">
-                        <a class="sidebar-link sidebar-title" href="#"><i data-feather="music"></i><span>Studio
-                                Management</span></a>
+                        <a class="sidebar-link sidebar-title" href="#"><i
+                                data-feather="music"></i><span>Studio</span></a>
                         <ul class="sidebar-submenu">
-                            <li><a href="{{ url('/studios') }}">List Studios</a></li>
-                            <li><a href="{{ url('/studios-schedules') }}">List Studio Schedules</a></li>
+                            <li><a href="{{ route('admin.studios.index') }}">List Studios</a></li>
+                            <li><a href="{{ route('admin.studios.schedules') }}">List Studio Schedules</a></li>
                         </ul>
                     </li>
                     <li class="sidebar-list">
-                        <a class="sidebar-link sidebar-title" href="#"><i data-feather="users"></i><span>Tutor
-                                Management</span></a>
+                        <a class="sidebar-link sidebar-title" href="#"><i data-feather="users"></i><span>Tutor &
+                                Class</span></a>
                         <ul class="sidebar-submenu">
-                            <li><a href="{{ url('/tutors') }}">List Tutors</a></li>
-                            <li><a href="{{ url('/tutors-classes') }}">List Classes</a></li>
-                            <li><a href="{{ url('/tutors-users') }}">List Users</a></li>
+                            <li><a href="{{ route('admin.tutors.index') }}">List Tutors</a></li>
+                            <li><a href="{{ route('admin.tutors.classes.index') }}">List Classes</a></li>
+                            <li><a href="{{ route('admin.tutors.classes.schedules') }}">List Class Schedules</a></li>
                         </ul>
                     </li>
                     <li class="sidebar-list">
                         <a class="sidebar-link sidebar-title" href="#"><i
-                                data-feather="dollar-sign"></i><span>Transaction Management</span></a>
+                                data-feather="dollar-sign"></i><span>Transaction</span></a>
                         <ul class="sidebar-submenu">
                             <li><a href="{{ url('/transactions') }}">List Transactions</a></li>
                         </ul>

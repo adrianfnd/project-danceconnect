@@ -43,7 +43,8 @@ class ClassesSeeder extends Seeder
                 'tutor_id' => $tutors->random()->uuid,
                 'description' => $levels[array_rand($levels)] . ' level K-pop dance cover class',
                 'duration' => rand(60, 120),
-                'price' => rand(75000, 200000)
+                'price' => rand(75000, 200000),
+                'image_url' => 'https://source.unsplash.com/1600x900/?class'
             ]);
         }
     }

@@ -18,6 +18,9 @@ class Transaction extends Model
         'tutor_id',
         'tutor_scheduled_id', 
         'class_id', 
+        'amount', 
+        'xendit_log_id',
+        'amount_paid',
         'status'
     ];
 

@@ -28,6 +28,7 @@ class TutorSeeder extends Seeder
                 'uuid' => Str::uuid(),
                 'name' => $tutor,
                 'bio' => "Instruktur tari berpengalaman di Indonesia yang mengkhususkan diri dalam koreografi modern dan pertunjukan gaya idol.",
+                'image_url' => 'https://source.unsplash.com/1600x900/?tutor'
             ]);
         }
     }
