@@ -38,15 +38,10 @@ class AuthController extends Controller
         return back()->withErrors(['credentials' => 'Password atau Username yang anda masukkan salah']);
     }
 
-
-    public function logout(Request $request)
+    public function logout()
     {
         Auth::logout();
 
-        $request->session()->invalidate();
-
-        $request->session()->regenerateToken();
-
-        return redirect('/');
+        return redirect('/login');
     }
 }
