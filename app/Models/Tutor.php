@@ -9,7 +9,7 @@ class Tutor extends Model
 {
     use HasUuids;
 
-    protected $primaryKey = 'uuid';
+    protected $primaryKey = 'id';
 
     protected $fillable = [
         'name',
@@ -18,11 +18,11 @@ class Tutor extends Model
 
     public function classes()
     {
-        return $this->hasMany(Classes::class, 'tutor_id', 'uuid');
+        return $this->hasMany(Classes::class, 'tutor_id', 'id');
     }
 
     public function schedules()
     {
-        return $this->hasMany(TutorSchedule::class, 'tutor_id', 'uuid');
+        return $this->hasMany(TutorSchedule::class, 'tutor_id', 'id');
     }
 }

@@ -12,11 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('tutor_schedules', function (Blueprint $table) {
-             $table->id();
+            $table->id();
             $table->uuid('tutor_id');
-            $table->foreign('tutor_id')->references('uuid')->on('tutors');
+            $table->foreign('tutor_id')->references('id')->on('tutors');
             $table->uuid('user_id');
-            $table->foreign('user_id')->references('uuid')->on('users');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamp('booked_at');
             $table->timestamps();
         });

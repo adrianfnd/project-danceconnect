@@ -9,7 +9,7 @@ class Transaction extends Model
 {
     use HasUuids;
 
-    protected $primaryKey = 'uuid';
+    protected $primaryKey = 'id';
 
     protected $fillable = [
         'user_id', 
@@ -23,12 +23,12 @@ class Transaction extends Model
 
     public function user()
     {
-        return $this->belongsTo(User::class, 'user_id', 'uuid');
+        return $this->belongsTo(User::class, 'user_id', 'id');
     }
 
     public function studio()
     {
-        return $this->belongsTo(Studio::class, 'studio_id', 'uuid');
+        return $this->belongsTo(Studio::class, 'studio_id', 'id');
     }
 
     public function studioSchedule()
@@ -38,7 +38,7 @@ class Transaction extends Model
 
     public function tutor()
     {
-        return $this->belongsTo(Tutor::class, 'tutor_id', 'uuid');
+        return $this->belongsTo(Tutor::class, 'tutor_id', 'id');
     }
 
     public function tutorSchedule()
@@ -48,11 +48,11 @@ class Transaction extends Model
 
     public function class()
     {
-        return $this->belongsTo(Classes::class, 'class_id', 'uuid');
+        return $this->belongsTo(Classes::class, 'class_id', 'id');
     }
 
     public function xenditLog()
     {
-        return $this->hasOne(XenditLog::class, 'transaction_id', 'uuid');
+        return $this->hasOne(XenditLog::class, 'transaction_id', 'id');
     }
 }

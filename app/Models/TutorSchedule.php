@@ -14,11 +14,11 @@ class TutorSchedule extends Model
 
     public function tutor()
     {
-        return $this->belongsTo(Tutor::class, 'tutor_id', 'uuid');
+        return $this->belongsTo(Tutor::class, 'tutor_id', 'id');
     }
 
     public function user()
     {
-        return $this->belongsTo(User::class, 'user_id', 'uuid');
+        return $this->belongsTo(User::class, 'user_id', 'id');
     }
 }

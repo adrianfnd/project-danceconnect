@@ -15,11 +15,11 @@ class StudioSchedule extends Model
 
     public function studio()
     {
-        return $this->belongsTo(Studio::class, 'studio_id', 'uuid');
+        return $this->belongsTo(Studio::class, 'studio_id', 'id');
     }
 
     public function user()
     {
-        return $this->belongsTo(User::class, 'user_id', 'uuid');
+        return $this->belongsTo(User::class, 'user_id', 'id');
     }
 }

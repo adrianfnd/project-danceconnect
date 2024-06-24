@@ -9,7 +9,7 @@ class Studio extends Model
 {
     use HasUuids;
 
-    protected $primaryKey = 'uuid';
+    protected $primaryKey = 'id';
 
     protected $fillable = [
         'name', 
@@ -22,6 +22,6 @@ class Studio extends Model
 
     public function schedules()
     {
-        return $this->hasMany(StudioSchedule::class, 'studio_id', 'uuid');
+        return $this->hasMany(StudioSchedule::class, 'studio_id', 'id');
     }
 }

@@ -9,7 +9,7 @@ class Classes extends Model
 {
     use HasUuids;
 
-    protected $primaryKey = 'uuid';
+    protected $primaryKey = 'id';
 
     protected $fillable = [
         'name', 
@@ -23,11 +23,11 @@ class Classes extends Model
 
     public function tutor()
     {
-        return $this->belongsTo(Tutor::class, 'tutor_id', 'uuid');
+        return $this->belongsTo(Tutor::class, 'tutor_id', 'id');
     }
 
     public function transactions()
     {
-        return $this->hasMany(Transaction::class, 'class_id', 'uuid');
+        return $this->hasMany(Transaction::class, 'class_id', 'id');
     }
 }

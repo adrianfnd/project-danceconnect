@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('studio_schedules', function (Blueprint $table) {
             $table->id();
-            $table->uuid('studio_id');
-            $table->foreign('studio_id')->references('uuid')->on('studios');
+            $table->uuid('id');
+            $table->foreign('studio_id')->references('id')->on('studios');
             $table->uuid('user_id');
-            $table->foreign('user_id')->references('uuid')->on('users');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamp('booked_at');
             $table->string('status');
             $table->timestamps();

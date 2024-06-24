@@ -12,19 +12,19 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('transactions', function (Blueprint $table) {
-            $table->uuid('uuid')->primary();
+            $table->uuid('id')->primary();
             $table->uuid('user_id');
-            $table->foreign('user_id')->references('uuid')->on('users');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->uuid('studio_id')->nullable();
-            $table->foreign('studio_id')->references('uuid')->on('studios');
+            $table->foreign('studio_id')->references('id')->on('studios');
             $table->unsignedBigInteger('studio_schedule_id')->nullable();
             $table->foreign('studio_schedule_id')->references('id')->on('studio_schedules');
             $table->uuid('tutor_id')->nullable();
-            $table->foreign('tutor_id')->references('uuid')->on('tutors');
+            $table->foreign('tutor_id')->references('id')->on('tutors');
             $table->unsignedBigInteger('tutor_scheduled_id')->nullable();
             $table->foreign('tutor_scheduled_id')->references('id')->on('tutor_schedules');
             $table->uuid('class_id')->nullable();
-            $table->foreign('class_id')->references('uuid')->on('classes');
+            $table->foreign('class_id')->references('id')->on('classes');
             $table->string('xendit_log_id')->nullable();
             $table->foreign('xendit_log_id')->references('id')->on('xendit_logs');
             $table->string('status');
