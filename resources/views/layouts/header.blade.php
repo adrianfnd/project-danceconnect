@@ -29,12 +29,14 @@
                 <li class="profile-nav onhover-dropdown p-0 me-0">
                     <div class="media profile-media"><img class="b-r-10" src="../assets/images/dashboard/profile.jpg"
                             alt="">
-                        <div class="media-body"><span>-------- DUMMY---------</span>
-                            <p class="mb-0 font-roboto">Admin <i class="middle fa fa-angle-down"></i></p>
+                        <div class="media-body"><span> {{ $currentUser->name }}</span>
+                            <p class="mb-0 font-roboto"> {{ $currentUser->role->name }} <i
+                                    class="middle fa fa-angle-down"></i></p>
                         </div>
                     </div>
                     <ul class="profile-dropdown onhover-show-div">
-                        <li><a href=""><i data-feather="log-out"> </i><span>Log out</span></a></li>
+                        <li><a href="{{ route('logout.action') }}"><i data-feather="log-out"> </i><span>Log
+                                    out</span></a></li>
                     </ul>
                 </li>
             </ul>

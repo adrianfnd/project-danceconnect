@@ -2,16 +2,17 @@
     <div>
         <div class="logo-wrapper">
             <a href="{{ url('/') }}">
-                <img class="img-fluid for-light" src="../assets/images/logo/logo.png" style="width: 150px"
-                    alt="Studio Management">
-                <img class="img-fluid for-dark" src="../assets/images/logo/logo_dark.png" alt="Studio Management">
+                <img class="img-fluid for-light" src="../assets/images/logo/logo.png"
+                    style="width: 150px; margin-top: -8px" alt="Dance Connect Logo">
+                <img class="img-fluid for-dark" src="../assets/images/logo/logo_dark.png" alt="Dance Connect Logo">
             </a>
             <div class="back-btn"><i class="fa fa-angle-left"></i></div>
             <div class="toggle-sidebar"><i class="status_toggle middle sidebar-toggle" data-feather="grid"> </i></div>
         </div>
         <div class="logo-icon-wrapper">
             <a href="{{ url('/') }}">
-                <img class="img-fluid" src="../assets/images/logo/logo-icon.png" style="width: 40px" alt="">
+                <img class="img-fluid" src="../assets/images/logo/logo-icon.png" style="width: 40px"
+                    alt="Dance Connect Logo" style="margin-top: -8px">
             </a>
         </div>
         <nav class="sidebar-main">
@@ -49,9 +50,11 @@
                         </ul>
                     </li>
                     <li class="sidebar-list">
-                        <a class="sidebar-link sidebar-title" href="{{ url('/transactions') }}">
-                            <i data-feather="dollar-sign"></i><span>Transaction Management</span>
-                        </a>
+                        <a class="sidebar-link sidebar-title" href="#"><i
+                                data-feather="dollar-sign"></i><span>Transaction Management</span></a>
+                        <ul class="sidebar-submenu">
+                            <li><a href="{{ url('/transactions') }}">List Transactions</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>
