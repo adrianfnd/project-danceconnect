@@ -36,17 +36,17 @@
                         <a class="sidebar-link sidebar-title" href="#"><i
                                 data-feather="music"></i><span>Studio</span></a>
                         <ul class="sidebar-submenu">
-                            <li><a href="{{ route('admin.studios.index') }}">List Studios</a></li>
-                            <li><a href="{{ route('admin.studios.schedules') }}">List Studio Schedules</a></li>
+                            <li><a href="{{ route('studios.index') }}">List Studios</a></li>
+                            <li><a href="{{ route('studios.schedules') }}">List Studio Schedules</a></li>
                         </ul>
                     </li>
                     <li class="sidebar-list">
                         <a class="sidebar-link sidebar-title" href="#"><i data-feather="users"></i><span>Tutor &
                                 Class</span></a>
                         <ul class="sidebar-submenu">
-                            <li><a href="{{ route('admin.tutors.index') }}">List Tutors</a></li>
-                            <li><a href="{{ route('admin.tutors.classes.index') }}">List Classes</a></li>
-                            <li><a href="{{ route('admin.tutors.classes.schedules') }}">List Class Schedules</a></li>
+                            <li><a href="{{ route('tutors.index') }}">List Tutors</a></li>
+                            <li><a href="{{ route('tutors.classes.index') }}">List Classes</a></li>
+                            <li><a href="{{ route('tutors.classes.schedules') }}">List Class Schedules</a></li>
                         </ul>
                     </li>
                     <li class="sidebar-list">

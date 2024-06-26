@@ -29,7 +29,7 @@ class AuthController extends Controller
             $user = Auth::user()->load('role');
 
             if ($user->role->name == 'admin') {
-                return redirect()->route('admin.studios.index');
+                return redirect()->route('dashboard');
             } elseif ($user->role->name == 'costumer') {
                 // return redirect()->route('costumer.landing');
             }

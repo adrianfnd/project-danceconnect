@@ -31,22 +31,28 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('logout.action');
 // Admin routes
 Route::middleware(['auth'])->group(function () {
     // Dashboard routes
-    Route::get('/dashboard', [DashboardAdminController::class, 'index'])->name('admin.dashboard');
+    Route::get('/dashboard', [DashboardAdminController::class, 'index'])->name('dashboard');
 
     // Studio routes
-    Route::get('/studios', [StudioAdminController::class, 'index'])->name('admin.studios.index');
-    Route::get('/studios-schedules', [StudioAdminController::class, 'schedules'])->name('admin.studios.schedules');
-    Route::get('/studios-{id}', [StudioAdminController::class, 'schedule'])->name('admin.studios.schedule');
+    Route::get('/studios', [StudioAdminController::class, 'index'])->name('studios.index');
+    Route::get('/studios-schedules', [StudioAdminController::class, 'schedules'])->name('studios.schedules');
+    Route::get('/studios-{id}', [StudioAdminController::class, 'schedule'])->name('studios.schedule');
+    Route::get('/studios/create', [StudioAdminController::class, 'create'])->name('studios.create');
+    Route::post('/studios', [StudioAdminController::class, 'store'])->name('studios.store');
+    Route::get('/studios-{id}', [StudioAdminController::class, 'show'])->name('studios.show');
+    Route::get('/studios/edit-{id}', [StudioAdminController::class, 'edit'])->name('studios.edit');
+    Route::put('/studios-{id}', [StudioAdminController::class, 'update'])->name('studios.update');
+    Route::delete('/studios-{id}', [StudioAdminController::class, 'destroy'])->name('studios.destroy');
 
     // Tutor routes
-    Route::get('/tutors', [TutorAdminController::class, 'index'])->name('admin.tutors.index');
-    Route::get('/tutors-classes', [TutorAdminController::class, 'indexClasses'])->name('admin.tutors.classes.index');
-    Route::get('/tutors-classes-schedules', [TutorAdminController::class, 'schedules'])->name('admin.tutors.classes.schedules');
-    Route::get('/tutors-classes-{id}', [TutorAdminController::class, 'schedule'])->name('admin.tutors.classes.schedule');
+    Route::get('/tutors', [TutorAdminController::class, 'index'])->name('tutors.index');
+    Route::get('/tutors-classes', [TutorAdminController::class, 'indexClasses'])->name('tutors.classes.index');
+    Route::get('/tutors-classes-schedules', [TutorAdminController::class, 'schedules'])->name('tutors.classes.schedules');
+    Route::get('/tutors-classes-{id}', [TutorAdminController::class, 'schedule'])->name('tutors.classes.schedule');
 
     // Transaction routes
-    Route::get('/transactions', [TransactionAdminController::class, 'index'])->name('admin.transactions.index');
-    Route::get('/transactions-{id}', [TransactionAdminController::class, 'show'])->name('admin.transactions.show');
+    Route::get('/transactions', [TransactionAdminController::class, 'index'])->name('transactions.index');
+    Route::get('/transactions-{id}', [TransactionAdminController::class, 'show'])->name('transactions.show');
 });
 
 // Costumer routes
