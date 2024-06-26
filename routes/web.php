@@ -49,6 +49,13 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/tutors-classes', [TutorAdminController::class, 'indexClasses'])->name('tutors.classes.index');
     Route::get('/tutors-classes-schedules', [TutorAdminController::class, 'schedules'])->name('tutors.classes.schedules');
     Route::get('/tutors-classes-{id}', [TutorAdminController::class, 'schedule'])->name('tutors.classes.schedule');
+    Route::get('/tutors', [TutorAdminController::class, 'index'])->name('tutors.index');
+    Route::get('/tutors/create', [TutorAdminController::class, 'create'])->name('tutors.create');
+    Route::post('/tutors', [TutorAdminController::class, 'store'])->name('tutors.store');
+    Route::get('/tutors-{id}', [TutorAdminController::class, 'show'])->name('tutors.show');
+    Route::get('/tutors/edit-{id}', [TutorAdminController::class, 'edit'])->name('tutors.edit');
+    Route::put('/tutors-{id}', [TutorAdminController::class, 'update'])->name('tutors.update');
+    Route::delete('/tutors-{id}', [TutorAdminController::class, 'destroy'])->name('tutors.destroy');
 
     // Transaction routes
     Route::get('/transactions', [TransactionAdminController::class, 'index'])->name('transactions.index');
