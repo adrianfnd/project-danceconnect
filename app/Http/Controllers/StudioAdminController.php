@@ -61,7 +61,7 @@ class StudioAdminController extends Controller
             'name' => 'required|string|max:255',
             'location' => 'required|string|max:255',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'price' => 'required|numeric|min:10000',
+            'price' => 'required|numeric|min:10000, max:99999999',
             'owner' => 'required|string|max:255',
             'description' => 'nullable|string'
         ]);
@@ -93,7 +93,7 @@ class StudioAdminController extends Controller
             'name' => 'required|string|max:255',
             'location' => 'required|string|max:255',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'price' => 'required|numeric|min:10000',
+            'price' => 'required|numeric|min:10000, max:99999999',
             'owner' => 'required|string|max:255',
             'description' => 'nullable|string'
         ]);

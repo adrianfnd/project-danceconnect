@@ -45,7 +45,7 @@
                                 Class</span></a>
                         <ul class="sidebar-submenu">
                             <li><a href="{{ route('tutors.index') }}">List Tutors</a></li>
-                            <li><a href="{{ route('tutors.classes.index') }}">List Classes</a></li>
+                            <li><a href="{{ route('classes.index') }}">List Classes</a></li>
                             <li><a href="{{ route('tutors.classes.schedules') }}">List Class Schedules</a></li>
                         </ul>
                     </li>
