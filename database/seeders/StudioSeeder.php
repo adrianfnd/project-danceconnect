@@ -22,7 +22,7 @@ class StudioSeeder extends Seeder
 
         foreach ($studios as $studio) {
             Studio::create([
-                'uuid' => Str::uuid(),
+                'id' => Str::uuid(),
                 'name' => $studio['name'],
                 'location' => $cities[array_rand($cities)],
                 'image_url' => 'https://source.unsplash.com/1600x900/?studio',

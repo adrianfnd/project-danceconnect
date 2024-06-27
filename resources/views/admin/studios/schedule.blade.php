@@ -11,6 +11,7 @@
                     <div id='calendar'></div>
                 </div>
             </div>
+            <a href="{{ route('studios.schedules') }}" class="btn btn-primary">Back</a>
         </div>
     </div>
 

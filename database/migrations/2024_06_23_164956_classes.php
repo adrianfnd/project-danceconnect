@@ -18,7 +18,7 @@ return new class extends Migration
             $table->integer('quota');
             $table->uuid('tutor_id');
             $table->foreign('tutor_id')->references('id')->on('tutors');
-            $table->text('description');
+            $table->text('description')->nullable();
             $table->integer('duration');
             $table->decimal('price', 10, 2);
             $table->string('image_url')->nullable();

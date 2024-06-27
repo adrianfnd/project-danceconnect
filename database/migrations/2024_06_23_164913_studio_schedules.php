@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('studio_schedules', function (Blueprint $table) {
             $table->id();
-            $table->uuid('id');
+            $table->uuid('studio_id');
             $table->foreign('studio_id')->references('id')->on('studios');
             $table->uuid('user_id');
             $table->foreign('user_id')->references('id')->on('users');

@@ -15,7 +15,7 @@ class UserSeeder extends Seeder
         $customerRole = Role::where('name', 'customer')->first();
 
         User::create([
-            'uuid' => Str::uuid(),
+            'id' => Str::uuid(),
             'email' => 'admin@gmail.com',
             'name' => 'Admin',
             'password' => bcrypt('password'),
@@ -23,7 +23,7 @@ class UserSeeder extends Seeder
         ]);
 
         User::create([
-            'uuid' => Str::uuid(),
+            'id' => Str::uuid(),
             'email' => 'albi@gmail.com',
             'name' => 'Albi Nur Yachya Muslim',
             'password' => bcrypt('password'),

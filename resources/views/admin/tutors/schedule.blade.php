@@ -11,6 +11,7 @@
                     <div id='calendar'></div>
                 </div>
             </div>
+            <a href="{{ route('tutors.classes.schedules') }}" class="btn btn-primary">Back</a>
         </div>
     </div>
 

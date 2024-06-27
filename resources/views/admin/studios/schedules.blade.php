@@ -36,7 +36,7 @@
                                         <td>{{ $studio->owner }}</td>
                                         <td>
                                             <center>
-                                                <a href="{{ url('/studios-' . $studio->id) }}"
+                                                <a href="{{ url('/studios-schedule-' . $studio->id) }}"
                                                     class="btn btn-info btn-sm rounded-circle"
                                                     style="width: 30px; height: 30px; padding: 0; display: flex; align-items: center; justify-content: center; margin: 5px;">
                                                     <i class="icofont icofont-calendar"></i>

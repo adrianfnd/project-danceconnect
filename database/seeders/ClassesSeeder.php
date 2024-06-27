@@ -36,11 +36,11 @@ class ClassesSeeder extends Seeder
 
         foreach ($classes as $class) {
             Classes::create([
-                'uuid' => Str::uuid(),
+                'id' => Str::uuid(),
                 'name' => $class,
                 'start_at' => Carbon::now()->addDays(rand(1, 30))->setTime(rand(9, 20), 0),
                 'quota' => rand(10, 30),
-                'tutor_id' => $tutors->random()->uuid,
+                'tutor_id' => $tutors->random()->id,
                 'description' => $levels[array_rand($levels)] . ' level K-pop dance cover class',
                 'duration' => rand(60, 120),
                 'price' => rand(75000, 200000),
