@@ -46,7 +46,6 @@ Route::middleware(['auth'])->group(function () {
 
     // Tutor routes
     Route::get('/tutors', [TutorAdminController::class, 'index'])->name('tutors.index');
-    Route::get('/tutors-classes', [TutorAdminController::class, 'indexClasses'])->name('tutors.classes.index');
     Route::get('/tutors-classes-schedules', [TutorAdminController::class, 'schedules'])->name('tutors.classes.schedules');
     Route::get('/tutors-classes-{id}', [TutorAdminController::class, 'schedule'])->name('tutors.classes.schedule');
     Route::get('/tutors', [TutorAdminController::class, 'index'])->name('tutors.index');
@@ -56,6 +55,14 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/tutors/edit-{id}', [TutorAdminController::class, 'edit'])->name('tutors.edit');
     Route::put('/tutors-{id}', [TutorAdminController::class, 'update'])->name('tutors.update');
     Route::delete('/tutors-{id}', [TutorAdminController::class, 'destroy'])->name('tutors.destroy');
+    Route::get('/classes', [TutorAdminController::class, 'indexClasses'])->name('classes.index');
+    Route::get('/classes/create', [TutorAdminController::class, 'createClass'])->name('classes.create');
+    Route::post('/classes', [TutorAdminController::class, 'storeClass'])->name('classes.store');
+    Route::get('/classes-{id}', [TutorAdminController::class, 'showClass'])->name('classes.show');
+    Route::get('/classes/edit-{id}', [TutorAdminController::class, 'editClass'])->name('classes.edit');
+    Route::put('/classes-{id}', [TutorAdminController::class, 'updateClass'])->name('classes.update');
+    Route::delete('/classes-{id}', [TutorAdminController::class, 'destroyClass'])->name('classes.destroy');
+    Route::get('get-tutor-info/{id}', [TutorAdminController::class, 'getTutorInfo']);
 
     // Transaction routes
     Route::get('/transactions', [TransactionAdminController::class, 'index'])->name('transactions.index');
