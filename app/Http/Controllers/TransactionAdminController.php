@@ -13,7 +13,7 @@ class TransactionAdminController extends Controller
         $transactions = Transaction::with(['studio', 'tutor', 'class'])
                                 ->orderBy('created_at', 'desc')
                                 ->get();
-
+        
         return view('admin.transactions.index', compact('transactions'));
     }
 

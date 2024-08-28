@@ -19,7 +19,7 @@ class CheckRole
     public function handle(Request $request, Closure $next, $role)
     {
         if (!Auth::check()) {
-            return redirect()->route('login');
+            return redirect()->route('login')->withErrors(['auth' => 'Silakan login untuk mengakses halaman ini.']);
         }
 
         $user = Auth::user()->load('role');
@@ -27,6 +27,8 @@ class CheckRole
         if ($user->role->name == $role) {
             return $next($request);
         }
+
+        return redirect()->route('login')->withErrors(['permission' => 'Akses ditolak. Anda tidak memiliki hak akses yang diperlukan untuk halaman ini.']);
 
         abort(403, 'Unauthorized');
     }

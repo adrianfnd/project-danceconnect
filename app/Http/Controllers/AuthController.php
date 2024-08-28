@@ -22,16 +22,16 @@ class AuthController extends Controller
             'email.email' => 'Email tidak valid',
             'password.required' => 'Password wajib diisi',
         ]);
-    
+        
         $credentials = $request->only('email', 'password');
-    
+
         if (Auth::attempt($credentials)) {
             $user = Auth::user()->load('role');
-
+            
             if ($user->role->name == 'admin') {
                 return redirect()->route('dashboard');
-            } elseif ($user->role->name == 'costumer') {
-                // return redirect()->route('costumer.landing');
+            } elseif ($user->role->name == 'customer') {
+                return redirect()->route('userdashboard');
             }
         }
     
